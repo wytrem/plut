@@ -1,0 +1,22 @@
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'java-library'
+    // Apply the maven plugin to add support for maven related operations (such as intalling to local repo)
+    id 'maven'
+}
+
+group = 'net.wytrem'
+version = '1.0'
+archivesBaseName = 'plut'
+
+dependencies {
+    api "org.spigotmc:spigot-api:1.12.2-R0.1-SNAPSHOT"
+}
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+
+    maven { url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
